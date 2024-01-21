@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
-
- int main () {
-     char str[1118];
-     scanf("%s", str);
-     
+int camelcase(char str[]){
      int count = 1;
      for (int i = 0; str[i] != 0; i++) {
          if(isupper(str[i]) && i != 0) {
@@ -12,4 +8,11 @@
          }
      }
      printf("%d", count);
+     return count;
+}
+ int main () {
+     char str[1001];
+     scanf("%s", str);
+     
+    camelcase(str);
  }
