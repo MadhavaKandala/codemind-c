@@ -2,7 +2,7 @@
 #include <ctype.h>
 
  int main () {
-     char str[1001];
+     char str[1118];
      scanf("%s", str);
      
      int count = 1;
