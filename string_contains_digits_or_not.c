@@ -17,6 +17,6 @@ int main(){
             }
         }
         printf("%s
-",count == 0 ?"No" : "Yes");
+",count == 1 ?"Yes" : "No");
     }
 }
