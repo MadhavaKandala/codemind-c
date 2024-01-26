@@ -8,20 +8,23 @@ int main(){
         scanf("%d", &arr[i]);
     }
     int k;
-    int printed = 0;
     scanf("%d", &k);
-    int count[1008] = {0};
+    
+    int found = 1;
     for(int i = 0; i<n; i++){
-        count[arr[i]]++;
-    }
-    for(int i = 0; i<n; i++){
-        if(count[arr[i]] == k){
+        int count = 0;
+        for(int j = 0; j<n; j++){
+            if(arr[i] == arr[j]){
+                count ++;
+            }
+        }
+        if(count == k){
             printf("%d ", arr[i]);
-            count[arr[i]] = 0;
-            printed = 1;
+            found = 0;
+            arr[i] = 0;
         }
     }
-    if(!printed){
+    if(found){
         printf("-1");
     }
 }
